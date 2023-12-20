@@ -1,0 +1,573 @@
+Enter password: ***************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.35 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source --help
+ERROR:
+Failed to open file '--help', error: 2
+mysql> source help
+ERROR:
+Failed to open file 'help', error: 2
+mysql> source -help
+ERROR:
+Failed to open file '-help', error: 2
+mysql> use foodly2
+Database changed
+mysql> source C:\Users\GRETA\Desktop\Course_BDD\partie_2\foodly.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 20 rows affected (0.01 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW tables;
++-------------------+
+| Tables_in_foodly2 |
++-------------------+
+| aliment           |
+| utilisateur       |
++-------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM aliment;
++----+-----------------+-------------+-------+----------+----------+-----------+------+
+| id | nom             | marque      | sucre | calories | graisses | proteines | bio  |
++----+-----------------+-------------+-------+----------+----------+-----------+------+
+|  1 | pomme           | sans marque |  19.1 |       72 |      0.2 |       0.4 |    0 |
+|  2 | poire           | sans marque |  27.5 |      134 |      0.2 |       1.1 |    1 |
+|  3 | banane          | chiquita    |    24 |      101 |      0.3 |       1.1 |    0 |
+|  4 | jambon          | herta       |   0.2 |       34 |      0.8 |       6.6 |    0 |
+|  5 | compote         | andros      |    11 |       51 |        0 |       0.5 |    0 |
+|  6 | steak haché     | charal      |   0.8 |       68 |      4.8 |       4.8 |    0 |
+|  7 | saumon          | guyader     |     0 |      206 |     12.3 |      22.1 |    0 |
+|  8 | haricots verts  | bonduelle   |   5.8 |       25 |      0.1 |       1.5 |    0 |
+|  9 | riz             | oncle benz  |  28.2 |      130 |      0.3 |       2.7 |    0 |
+| 10 | pâtes completes | barilla     |    64 |      353 |      2.7 |        14 |    1 |
+| 11 | blanc de dinde  | père dodu   |   0.6 |       98 |      0.9 |        22 |    0 |
+| 12 | filet de poulet | le gaulois  |     0 |      121 |      1.8 |      26.2 |    0 |
+| 13 | muesli          | bjorg       |  26.5 |      170 |        5 |       3.5 |    1 |
+| 14 | café            | carte noire |     0 |        0 |        0 |         0 |    0 |
+| 15 | jus d'orange    | innocent    |    16 |       74 |        0 |       1.6 |    0 |
+| 16 | jus de pomme    | andros      |    24 |      100 |      0.2 |       0.2 |    1 |
+| 17 | pomme de terre  | doréac      |  21.1 |      104 |      0.2 |       2.8 |    0 |
+| 18 | oeuf            | naturalia   |   0.4 |       74 |      5.1 |       6.5 |    1 |
+| 19 | baguette        | sans marque |  36.1 |      185 |      1.2 |       7.5 |    0 |
+| 20 | lait d'amande   | bjorg       |   6.1 |       80 |      5.3 |       1.5 |    1 |
++----+-----------------+-------------+-------+----------+----------+-----------+------+
+20 rows in set (0.00 sec)
+
+mysql> SELECT * FROM utilisateur;
++----+-------------+----------+----------------------+
+| id | nom         | prenom   | email                |
++----+-------------+----------+----------------------+
+|  1 | durantay    | quentin  | qentin@gmail.com     |
+|  2 | dupont      | marie    | marie@hotmail.fr     |
+|  3 | miller      | vincent  | vm@yahoo.com         |
+|  4 | zuckerberg  | marc     | marc@gmail.com       |
+|  5 | paul        | pierre   | pp@orange.fr         |
+|  6 | de vauclerc | lisa     | lisadv@gmail.com     |
+|  7 | gluntig     | éléonore | glunt@sfr.com        |
+|  8 | cavill      | henry    | henry@outlook.fr     |
+|  9 | hopper      | lionel   | hpp@gmail.com        |
+| 10 | tember      | fabienne | fabienne@yopmail.com |
++----+-------------+----------+----------------------+
+10 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE moviz;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE moviz;
+Database changed
+mysql> CREATE TABLE film (
+    ->
+    ->     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    ->
+    ->     nom VARCHAR(255) NOT NULL,
+    ->
+    ->     date_de_sortie DATE,
+    ->
+    ->     synopsis TEXT,
+    ->
+    ->     langue VARCHAR(255),
+    ->
+    ->     budget INT
+    ->
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> SHOW tables;
++-----------------+
+| Tables_in_moviz |
++-----------------+
+| film            |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> SHOW COLUMNS FROM film;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| id             | int          | NO   | PRI | NULL    | auto_increment |
+| nom            | varchar(255) | NO   |     | NULL    |                |
+| date_de_sortie | date         | YES  |     | NULL    |                |
+| synopsis       | text         | YES  |     | NULL    |                |
+| langue         | varchar(255) | YES  |     | NULL    |                |
+| budget         | int          | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> USE foodly;
+Database changed
+mysql> SHOW tables;
++------------------+
+| Tables_in_foodly |
++------------------+
+| aliment          |
+| utilisateur      |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM aliment;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM utilisateur;
+Empty set (0.00 sec)
+
+mysql> DESCRIBE utilisateur;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int          | NO   | PRI | NULL    | auto_increment |
+| nom    | varchar(100) | YES  |     | NULL    |                |
+| prenom | varchar(100) | YES  |     | NULL    |                |
+| email  | varchar(255) | NO   | UNI | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> INSERT INTO `utilisateur` (`nom`, `prenom`, `email`)
+    -> VALUES ('Durantay', 'Quentin', 'quentin@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM utilisateur;
++----+----------+---------+-------------------+
+| id | nom      | prenom  | email             |
++----+----------+---------+-------------------+
+|  1 | Durantay | Quentin | quentin@gmail.com |
++----+----------+---------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO `utilisateur` (`nom`, `prenom`, `email`)
+    -> VALUES
+    -> ('Doe', 'John', 'john@yahoo.fr'),
+    -> ('Smith', 'Jane', 'jane@hotmail.com'),
+    -> ('Dupont', 'Sebastien', 'sebastien@orange.fr'),
+    -> ('Martin', 'Emilie', 'emilie@gmail.com');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM utilisateur;
++----+----------+-----------+---------------------+
+| id | nom      | prenom    | email               |
++----+----------+-----------+---------------------+
+|  1 | Durantay | Quentin   | quentin@gmail.com   |
+|  2 | Doe      | John      | john@yahoo.fr       |
+|  3 | Smith    | Jane      | jane@hotmail.com    |
+|  4 | Dupont   | Sebastien | sebastien@orange.fr |
+|  5 | Martin   | Emilie    | emilie@gmail.com    |
++----+----------+-----------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> INSERT INTO 'utilisateur' ('nom','prenom','email')
+    -> VALUES ('Dessolin', 'Thibaut', 'thibaut.dessolin@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''utilisateur' ('nom','prenom','email')
+VALUES ('Dessolin', 'Thibaut', 'thibaut.d' at line 1
+mysql> INSERT INTO 'utilisateur' ('nom','prenom','email')
+    -> VALUES ('Dessolin', 'Thibaut', 'thibaut@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''utilisateur' ('nom','prenom','email')
+VALUES ('Dessolin', 'Thibaut', 'thibaut@g' at line 1
+mysql> INSERT INTO 'utilisateur' ('nom','prenom','email')
+    -> ^C
+mysql> INSERT INTO 'utilisateur' ('nom', 'prenom', 'email')
+    -> VALUES ('Dessolin', 'Thibaut', 'thibaut@gmail.com');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''utilisateur' ('nom', 'prenom', 'email')
+VALUES ('Dessolin', 'Thibaut', 'thibaut' at line 1
+mysql> INSERT INTO `utilisateur` (`nom`, `prenom`, `email`)
+    -> VALUES ('Dessolin', 'Thibaut', 'thibaut@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM utilisateur;
++----+----------+-----------+---------------------+
+| id | nom      | prenom    | email               |
++----+----------+-----------+---------------------+
+|  1 | Durantay | Quentin   | quentin@gmail.com   |
+|  2 | Doe      | John      | john@yahoo.fr       |
+|  3 | Smith    | Jane      | jane@hotmail.com    |
+|  4 | Dupont   | Sebastien | sebastien@orange.fr |
+|  5 | Martin   | Emilie    | emilie@gmail.com    |
+|  6 | Dessolin | Thibaut   | thibaut@gmail.com   |
++----+----------+-----------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> INSERT INTO `aliment` (`nom`, `marque`, `sucre`, `calories`, `graisses`, `proteines`, `bio`)
+    -> VALUES
+    -> ('poire', 'monoprix', 27.5, 134, 0.2, 1.1, FALSE),
+    -> ('pomme', 'monoprix', 19.1, 72, 0.2, 0.4, FALSE),
+    -> ('oeuf', 'carrefour', 0.6, 82, 5.8, 6.9, TRUE),
+    -> ('lait d\'amande', 'bjorg', 4.5, 59, 3.9, 1.1, TRUE);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM utilisateur;
++----+----------+-----------+---------------------+
+| id | nom      | prenom    | email               |
++----+----------+-----------+---------------------+
+|  1 | Durantay | Quentin   | quentin@gmail.com   |
+|  2 | Doe      | John      | john@yahoo.fr       |
+|  3 | Smith    | Jane      | jane@hotmail.com    |
+|  4 | Dupont   | Sebastien | sebastien@orange.fr |
+|  5 | Martin   | Emilie    | emilie@gmail.com    |
+|  6 | Dessolin | Thibaut   | thibaut@gmail.com   |
++----+----------+-----------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM aliment;
++----+---------------+-----------+-------+----------+----------+-----------+------+
+| id | nom           | marque    | sucre | calories | graisses | proteines | bio  |
++----+---------------+-----------+-------+----------+----------+-----------+------+
+|  1 | poire         | monoprix  |  27.5 |      134 |      0.2 |       1.1 |    0 |
+|  2 | pomme         | monoprix  |  19.1 |       72 |      0.2 |       0.4 |    0 |
+|  3 | oeuf          | carrefour |   0.6 |       82 |      5.8 |       6.9 |    1 |
+|  4 | lait d'amande | bjorg     |   4.5 |       59 |      3.9 |       1.1 |    1 |
++----+---------------+-----------+-------+----------+----------+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> SHOW columns FROM aliment;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| nom       | varchar(100) | NO   |     | NULL    |                |
+| marque    | varchar(100) | YES  |     | NULL    |                |
+| sucre     | float        | YES  |     | NULL    |                |
+| calories  | int          | NO   |     | NULL    |                |
+| graisses  | float        | YES  |     | NULL    |                |
+| proteines | float        | YES  |     | NULL    |                |
+| bio       | tinyint(1)   | YES  |     | 0       |                |
++-----------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> DESCRIBE aliment;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| nom       | varchar(100) | NO   |     | NULL    |                |
+| marque    | varchar(100) | YES  |     | NULL    |                |
+| sucre     | float        | YES  |     | NULL    |                |
+| calories  | int          | NO   |     | NULL    |                |
+| graisses  | float        | YES  |     | NULL    |                |
+| proteines | float        | YES  |     | NULL    |                |
+| bio       | tinyint(1)   | YES  |     | 0       |                |
++-----------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> INSERT INTO `aliment` (`nom`, `marque`, `sucre`, `calories`, `graisses`, `proteines`, `bio`)
+    -> VALUES ('haricots verts', 'Monoprix', 25, 3, 0, 1.7, FALSE);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> DESCRIBE aliment;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| nom       | varchar(100) | NO   |     | NULL    |                |
+| marque    | varchar(100) | YES  |     | NULL    |                |
+| sucre     | float        | YES  |     | NULL    |                |
+| calories  | int          | NO   |     | NULL    |                |
+| graisses  | float        | YES  |     | NULL    |                |
+| proteines | float        | YES  |     | NULL    |                |
+| bio       | tinyint(1)   | YES  |     | 0       |                |
++-----------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM aliment;
++----+----------------+-----------+-------+----------+----------+-----------+------+
+| id | nom            | marque    | sucre | calories | graisses | proteines | bio  |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+|  1 | poire          | monoprix  |  27.5 |      134 |      0.2 |       1.1 |    0 |
+|  2 | pomme          | monoprix  |  19.1 |       72 |      0.2 |       0.4 |    0 |
+|  3 | oeuf           | carrefour |   0.6 |       82 |      5.8 |       6.9 |    1 |
+|  4 | lait d'amande  | bjorg     |   4.5 |       59 |      3.9 |       1.1 |    1 |
+|  5 | haricots verts | Monoprix  |    25 |        3 |        0 |       1.7 |    0 |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM utilisateur;
++----+----------+-----------+---------------------+
+| id | nom      | prenom    | email               |
++----+----------+-----------+---------------------+
+|  1 | Durantay | Quentin   | quentin@gmail.com   |
+|  2 | Doe      | John      | john@yahoo.fr       |
+|  3 | Smith    | Jane      | jane@hotmail.com    |
+|  4 | Dupont   | Sebastien | sebastien@orange.fr |
+|  5 | Martin   | Emilie    | emilie@gmail.com    |
+|  6 | Dessolin | Thibaut   | thibaut@gmail.com   |
++----+----------+-----------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT `nom`, `prenom`, `email` FROM utilisateur;
++----------+-----------+---------------------+
+| nom      | prenom    | email               |
++----------+-----------+---------------------+
+| Durantay | Quentin   | quentin@gmail.com   |
+| Doe      | John      | john@yahoo.fr       |
+| Smith    | Jane      | jane@hotmail.com    |
+| Dupont   | Sebastien | sebastien@orange.fr |
+| Martin   | Emilie    | emilie@gmail.com    |
+| Dessolin | Thibaut   | thibaut@gmail.com   |
++----------+-----------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> UPDATE `utilisateur` SET `email` = 'quentind@gmail.com' WHERE `id` = '1';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM aliment;
++----+----------------+-----------+-------+----------+----------+-----------+------+
+| id | nom            | marque    | sucre | calories | graisses | proteines | bio  |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+|  1 | poire          | monoprix  |  27.5 |      134 |      0.2 |       1.1 |    0 |
+|  2 | pomme          | monoprix  |  19.1 |       72 |      0.2 |       0.4 |    0 |
+|  3 | oeuf           | carrefour |   0.6 |       82 |      5.8 |       6.9 |    1 |
+|  4 | lait d'amande  | bjorg     |   4.5 |       59 |      3.9 |       1.1 |    1 |
+|  5 | haricots verts | Monoprix  |    25 |        3 |        0 |       1.7 |    0 |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> UPTADE `aliment` SET `nom` = 'pomme golden' WHERE `id` = '2';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UPTADE `aliment` SET `nom` = 'pomme golden' WHERE `id` = '2'' at line 1
+mysql> UPDATE `aliment` SET `nom` = 'pomme_golden' WHERE `id` = '2';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE `aliment` SET `nom` = 'pomme golden' WHERE `id` = '2';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM aliment;
++----+----------------+-----------+-------+----------+----------+-----------+------+
+| id | nom            | marque    | sucre | calories | graisses | proteines | bio  |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+|  1 | poire          | monoprix  |  27.5 |      134 |      0.2 |       1.1 |    0 |
+|  2 | pomme golden   | monoprix  |  19.1 |       72 |      0.2 |       0.4 |    0 |
+|  3 | oeuf           | carrefour |   0.6 |       82 |      5.8 |       6.9 |    1 |
+|  4 | lait d'amande  | bjorg     |   4.5 |       59 |      3.9 |       1.1 |    1 |
+|  5 | haricots verts | Monoprix  |    25 |        3 |        0 |       1.7 |    0 |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM `utilisateur` WHERE `id` = '2';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM utilisateur;
++----+----------+-----------+---------------------+
+| id | nom      | prenom    | email               |
++----+----------+-----------+---------------------+
+|  1 | Durantay | Quentin   | quentind@gmail.com  |
+|  3 | Smith    | Jane      | jane@hotmail.com    |
+|  4 | Dupont   | Sebastien | sebastien@orange.fr |
+|  5 | Martin   | Emilie    | emilie@gmail.com    |
+|  6 | Dessolin | Thibaut   | thibaut@gmail.com   |
++----+----------+-----------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> DROP COLUMN `pomme golden` FROM `aliment`;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COLUMN `pomme golden` FROM `aliment`' at line 1
+mysql> DELETE FROM aliment WHERE id = 2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM aliment;
++----+----------------+-----------+-------+----------+----------+-----------+------+
+| id | nom            | marque    | sucre | calories | graisses | proteines | bio  |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+|  1 | poire          | monoprix  |  27.5 |      134 |      0.2 |       1.1 |    0 |
+|  3 | oeuf           | carrefour |   0.6 |       82 |      5.8 |       6.9 |    1 |
+|  4 | lait d'amande  | bjorg     |   4.5 |       59 |      3.9 |       1.1 |    1 |
+|  5 | haricots verts | Monoprix  |    25 |        3 |        0 |       1.7 |    0 |
++----+----------------+-----------+-------+----------+----------+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> USE moviz;
+Database changed
+mysql> SHOW tables;
++-----------------+
+| Tables_in_moviz |
++-----------------+
+| film            |
++-----------------+
+1 row in set (0.00 sec)
+
+
+mysql> USE moviz;
+Database changed
+
+mysql> source C:\Users\GRETA\Desktop\Course_BDD\moviz.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW tables;
++-----------------+
+| Tables_in_moviz |
++-----------------+
+| film            |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO `film` (`nom`, `date_de_sortie`, `synopsis`, `langue`, `budget`)
+
+    VALUES
+
+        (`Titanic`, `1998-04-04`,  `L'histoire du plus grand paquebot de son époque, et de sa funestre fin.`, `anglais`, 200000000),
+
+        (`Skyfall`, `2012-10-26`,  `Dans cet épisode le plus sombre de la saga, James Bond retourne à ses origines.`, `anglais`, 200000000),
+
+        (`La La Land`, `2017-01-25`,  `Une histoire d'amour à Los Angeles sous forme de comédie musicale.`, `anglais`, 30000000);
+Query OK, 3 row affected (0.01 sec)
+
+mysql> UPDATE `film` SET `budget` = 200500000 WHERE `nom` = “Skyfall”;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> DELETE FROM `film` WHERE `nom` = “La La Land”;
+Query OK, 1 row affected (0.00 sec)
